@@ -19,14 +19,12 @@ function onSearch(event) {
 
   const query = event.currentTarget.elements['search-text'].value.trim();
 
-  if (!query) {
-    iziToast.error({
-      message: 'Please enter a search query!',
-      position: 'topRight',
-    });
+  if (!query) {  
+   return;
 
-    return;
   }
+
+ 
 
   clearGallery();
   showLoader();
